@@ -8,28 +8,30 @@
 </head>
 <body>
 
-    <h1>Radio Internetowe</h1>
+    <main>
+        <h1>Radio Internetowe</h1>
 
-    <div class="station-list">
-        <form method="POST" action="/play">
-            <label for="station">Wybierz stację:</label>
-            <select name="station" id="station">
-                {% for station in stations %}
-                    <option value="{{ station }}">{{ station }}</option>
-                {% endfor %}
-            </select>
-            <button type="submit">Odtwórz</button>
-        </form>
-    </div>
-
-    {% if current_station %}
-        <div class="current-station">
-            Aktualnie odtwarzana stacja: <strong>{{ current_station }}</strong>
+        <div class="station-list">
+            <form method="POST" action="/play">
+                <label for="station">Wybierz stację:</label>
+                <select name="station" id="station">
+                    {% for station in stations %}
+                        <option value="{{ station }}">{{ station }}</option>
+                    {% endfor %}
+                </select>
+                <button id="play-button" type="submit">Odtwórz</button>
+            </form>
         </div>
-        <form method="POST" action="/stop">
-            <button type="submit" class="stop-button">Zatrzymaj</button>
-        </form>
-    {% endif %}
+
+        {% if current_station %}
+            <div class="current-station">
+                Aktualnie odtwarzana stacja: <strong>{{ current_station }}</strong>
+                <form method="POST" action="/stop">
+                    <button type="submit" id="stop-button">Zatrzymaj</button>
+                </form>
+            </div>
+        {% endif %}
+    </main>
 
 </body>
 </html>
