@@ -1,9 +1,8 @@
 from flask import Flask, render_template, request
 import subprocess
+from stations import stations
 
 app = Flask(__name__)
-
-stations = {"Nowy swiat": "https://stream.open.fm/368?type=.aac&user=800043471858&player_group=WWW"}
 
 current_process = None
 current_station = None
