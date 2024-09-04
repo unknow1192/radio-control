@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radio Internetowe</title>
-    <link rel="stylesheet" href="../static/index.css">
+    <title>Radio Control</title>
+    <link rel="stylesheet" href="../static/index.css"> <!--Kudos to Mikolaj Kaminski for help in styling-->
 </head>
 <body>
 
     <main>
-        <h1>Radio Internetowe</h1>
+        <h1>Internet Radio</h1>
 
         <div class="station-list">
             <form method="POST" action="/play">
-                <label for="station">Wybierz stację:</label>
+                <label for="station">Choose station:</label>
                 <select name="station" id="station">
                     {% for station in stations %}
                         <option value="{{ station }}">{{ station }}</option>
                     {% endfor %}
                 </select>
-                <button id="play-button" type="submit">Odtwórz</button>
+                <button id="play-button" type="submit">Play</button>
             </form>
         </div>
 
         {% if current_station %}
             <div class="current-station">
-                Aktualnie odtwarzana stacja: <strong>{{ current_station }}</strong>
+                Currently playing station: <strong>{{ current_station }}</strong>
                 <form method="POST" action="/stop">
-                    <button type="submit" id="stop-button">Zatrzymaj</button>
+                    <button type="submit" id="stop-button">Stop</button>
                 </form>
             </div>
         {% endif %}
