@@ -23,7 +23,7 @@ Radio Control is an application designed for Raspberry Pi that enables you to pl
 2. **Install required packages:**
    ```bash
    sudo apt-get update
-   sudo apt-get install python3-flask
+   sudo apt-get install python3-flask vlc
    ```
 
 3. **Configure the FM transmitter:**  
@@ -44,7 +44,11 @@ Radio Control is an application designed for Raspberry Pi that enables you to pl
    ```
    http://<Raspberry_Pi_IP_Address>:5000
    ```
-   Replace `<Raspberry_Pi_IP_Address>` with the IP address of your Raspberry Pi.
+   Replace `<Raspberry_Pi_IP_Address>` with the IP address of your Raspberry Pi. Run:
+   ```bash
+   ifconfig
+   ```
+   to get your IP
 
 3. **Select a radio station:**  
    Choose a station from the list on the web page and click the button to start streaming. The radio should begin broadcasting on the FM frequency.
