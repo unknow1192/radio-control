@@ -15,6 +15,7 @@
             <form method="POST" action="/play">
                 <label for="station">Choose station:</label>
                 <select name="station" id="station">
+                    <option value="" selected disabled hidden>Wybierz stację</option>
                     {% for station in stations %}
                         <option value="{{ station }}">{{ station }}</option>
                     {% endfor %}

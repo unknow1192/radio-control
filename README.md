@@ -36,7 +36,7 @@ Radio Control is an application designed for Raspberry Pi that enables you to pl
 
 1. **Start the application:**
    ```bash
-   python3 app.py
+   python3 radio-control.py
    ```
 
 2. **Visit the web interface:**
@@ -46,7 +46,7 @@ Radio Control is an application designed for Raspberry Pi that enables you to pl
    ```
    Replace `<Raspberry_Pi_IP_Address>` with the IP address of your Raspberry Pi. Run:
    ```bash
-   ifconfig
+   hostname -I
    ```
    to get your IP
 
